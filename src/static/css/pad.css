@@ -45,12 +45,12 @@ a img {
 }
 /* menu */
 .toolbar {
-  background: #f7f7f7;
-  background: -webkit-linear-gradient(#f7f7f7, #f1f1f1 80%);
+  background: #fff !important;
+  /*background: -webkit-linear-gradient(#f7f7f7, #f1f1f1 80%);
   background: -moz-linear-gradient(#f7f7f7, #f1f1f1 80%);
   background: -o-linear-gradient(#f7f7f7, #f1f1f1 80%);
   background: -ms-linear-gradient(#f7f7f7, #f1f1f1 80%);
-  background: linear-gradient(#f7f7f7, #f1f1f1 80%);
+  background: linear-gradient(#f7f7f7, #f1f1f1 80%);*/
   border-bottom: 1px solid #ccc;
   overflow: hidden;
   padding-top: 4px;
@@ -80,18 +80,19 @@ a img {
   padding: 5px;
   height:22px;
 }
+
 .toolbar ul li a:hover {
-  text-decoration: none;
-}
-.toolbar ul li a:hover {
+  border: 1px solid #ccc;
   background: #fff;
   background: -webkit-linear-gradient(#f4f4f4, #e4e4e4);
   background: -moz-linear-gradient(#f4f4f4, #e4e4e4);
   background: -o-linear-gradient(#f4f4f4, #e4e4e4);
   background: -ms-linear-gradient(#f4f4f4, #e4e4e4);
   background: linear-gradient(#f4f4f4, #e4e4e4);
+  text-decoration: none;
 }
 .toolbar ul li a:active {
+  border: 1px solid #ccc;
   background: #eee;
   background: -webkit-linear-gradient(#ddd, #fff);
   background: -moz-linear-gradient(#ddd, #fff);
@@ -114,28 +115,37 @@ a img {
   box-shadow: 0 0 8px rgba(0,0,0,.1) inset;
 }
 .toolbar ul li a {
-  background: #fff;
-  background: -webkit-linear-gradient(#fff, #f0f0f0);
-  background: -moz-linear-gradient(#fff, #f0f0f0);
-  background: -o-linear-gradient(#fff, #f0f0f0);
-  background: -ms-linear-gradient(#fff, #f0f0f0);
-  background: linear-gradient(#fff, #f0f0f0);
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  color: #ccc;
+  border: 1px solid transparent;
+  color: #555;
   cursor: pointer;
   display: inline-block;
-  min-height: 18px;
+  min-height: 22px;
   overflow: hidden;
   padding: 4px 5px;
   text-align: center;
   text-decoration: none;
-  min-width: 18px;
+  min-width: 22px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
 }
 .toolbar ul li a .buttonicon {
   position: relative;
   top: 1px;
 }
+
+.toolbar ul li[data-key="strikethrough"],
+.toolbar ul li[data-key="undo"],
+.toolbar ul li[data-key="redo"],
+.toolbar ul li[data-key="clearauthorship"],
+.toolbar ul li[data-key="import_export"],
+.toolbar ul li[data-key="showTimeSlider"],
+.toolbar ul li[data-key="savedRevision"],
+.toolbar ul li[data-key="settings"],
+.toolbar ul li[data-key="embed"]{
+    display: none;
+}
+
 .toolbar ul li a .buttontext {
   color: #666;
   font-size: 14px;
@@ -156,17 +166,14 @@ a img {
 }
 
 .toolbar ul li a.grouped-left {
-  border-radius: 3px 0 0 3px;
+  /*border-radius: 3px 0 0 3px;*/
 }
 .toolbar ul li a.grouped-middle {
-  border-radius: 0;
   margin-left: -2px;
-  border-left: 0;
 }
 .toolbar ul li a.grouped-right {
-  border-radius: 0 3px 3px 0;
+  /*border-radius: 0 3px 3px 0;*/
   margin-left: -2px;
-  border-left: 0;
 }
 .toolbar ul li a.selected {
   background: #eee !important;
@@ -758,10 +765,10 @@ table#otheruserstable {
   padding: 0;
   background: none;
   font-family: "fontawesome-etherpad";
-  font-size: 15px;
+  font-size: 18px;
   font-style: normal;
   font-weight: normal;
-  color: #666;
+  color: #333;
   cursor: pointer;
 }
 
@@ -1289,5 +1296,4 @@ input[type=checkbox] {
 .hideControlsEditbar{
   display:none !important;
 }
-
 

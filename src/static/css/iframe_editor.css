@@ -147,7 +147,7 @@ body.doesWrap > div{
 }
 
 .sidedivdelayed { /* class set after sizes are set */
-  background-color: #eee;
+  background-color: #fff !important;
   color: #888 !important;
   border-right: 1px solid #ccc;
 }
